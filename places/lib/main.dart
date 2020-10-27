@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MySecondWidget(),
+      title: 'Places',
+      home: MyFirstWidget(),
     );
   }
 }
@@ -57,4 +54,10 @@ class _MySecondWidgetState extends State<MySecondWidget> {
     counter++;
     print(counter);
   }
+
+  Type _runtimeType(){
+    return context.runtimeType;
+  }
 }
+
+
