@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:places/ui/screen/sight_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
@@ -58,4 +58,10 @@ class _MySecondWidgetState extends State<MySecondWidget> {
     counter++;
     print(counter);
   }
+
+  Type _runtimeType(){
+    return context.runtimeType;
+  }
 }
+
+
