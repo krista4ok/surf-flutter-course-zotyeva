@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/screen/sight_screen.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SightScreen(),
+      home: SightListScreen(),
     );
   }
 }
