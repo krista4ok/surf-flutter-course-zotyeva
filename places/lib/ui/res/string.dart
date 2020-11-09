@@ -1,3 +1,4 @@
-const String interestingPlaces = 'Интересные места';
-const String interesting = 'Интересные';
-const String places = ' места';
+const String interestingPlaces = 'Интересные места',
+    interesting = 'Интересные',
+    places = ' места',
+    showAsList = 'Показать списком';

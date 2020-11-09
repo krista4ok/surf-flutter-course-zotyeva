@@ -1,11 +1,11 @@
 import 'package:places/domain/sight.dart';
 
 ///Моковые данные интересных мест.
-final List mocks = [
+final List<Sight> mocks = [
   Sight(
     nameSights: 'Памятник Белому Биму',
-    lat: '51°39′58″ с. ш.',
-    lon: '39°12′20″ в. д.',
+    lat: 51.6595,
+    lon: 39.2054,
     url:
         'https://top10.travel/wp-content/uploads/2017/07/pamyatnik-belomu-bimu.jpg',
     details:
@@ -13,8 +13,8 @@ final List mocks = [
   ),
   Sight(
     nameSights: 'Котёнок с улицы Лизюкова',
-    lat: '51°42′24″ с. ш.',
-    lon: '39°10′20″ в. д.',
+    lat: 51.70677,
+    lon: 39.17226,
     url:
         'https://top10.travel/wp-content/uploads/2017/07/kotyonok-s-ulicy-lizyukova.jpg',
     details:
@@ -22,8 +22,8 @@ final List mocks = [
   ),
   Sight(
     nameSights: 'Корабль-музей «Гото-Предестинация»',
-    lat: '51°39′21″ с. ш.',
-    lon: '39°12′58″ в. д.',
+    lat: 51.65562,
+    lon: 39.21617,
     url:
         'https://top10.travel/wp-content/uploads/2017/07/goto-predestinaciya.jpg',
     details:

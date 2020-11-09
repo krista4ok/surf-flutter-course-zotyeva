@@ -1,8 +1,8 @@
 /// Модель данных интересных мест.
 class Sight {
 final String nameSights;
-final String lat;
-final String lon;
+final double lat;
+final double lon;
 final String url;
 final String details;
 
