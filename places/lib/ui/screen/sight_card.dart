@@ -6,9 +6,9 @@ import 'package:places/ui/res/string.dart';
 import 'package:places/ui/res/text_style.dart';
 
 class SightCard extends StatelessWidget {
-  final Sight sight;
+  final Sight _sight;
 
-  SightCard(this.sight);
+  SightCard(this._sight);
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class SightCard extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Text(
-                    sight.nameSights,
+                    _sight.nameSights,
                     style: textMedium16.copyWith(color: secondaryColor),
                   ),
                 ),
