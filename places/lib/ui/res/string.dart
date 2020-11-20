@@ -1,3 +1,6 @@
-const String interestingPlaces = 'Интересные места';
-const String interesting = 'Интересные';
-const String places = ' места';
+const String interestingPlaces = 'Интересные места',
+    interesting = 'Интересные',
+    places = ' места',
+    listInterestingPlaces = 'Список интересных мест',
+    category = 'Категория',
+    aroundTheClock = 'круглосуточно';
