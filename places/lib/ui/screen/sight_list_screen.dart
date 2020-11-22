@@ -12,23 +12,19 @@ class SightListScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: primaryColor,
-        appBar: AppBar(
-          elevation: 0,
-          toolbarHeight: 120,
-          backgroundColor: primaryColor,
-          title: Container(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 40),
-              child: RichText(
-                text: TextSpan(
-                  text: listInterestingPlaces,
-                  style:textBold32.copyWith(color: secondaryColor,
-                  ),
+        appBar: PreferredSize(
+          preferredSize: Size(double.infinity, 136),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 64, left: 16, right: 16),
+            child: RichText(
+              text: TextSpan(
+                text: listInterestingPlaces,
+                style: textBold32.copyWith(
+                  color: secondaryColor,
                 ),
               ),
             ),
           ),
-          centerTitle: false,
         ),
         body: SingleChildScrollView(
           child: Padding(

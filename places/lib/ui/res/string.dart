@@ -1,7 +1,7 @@
-const String interestingPlaces = 'Интересные места',
+const String
     interesting = 'Интересные',
     places = ' места',
-    listInterestingPlaces = 'Список интересных мест',
+    listInterestingPlaces = 'Список \nинтересных мест',
     category = 'Категория',
     aroundTheClock = 'круглосуточно',
     buildARoute = 'построить маршрут',
