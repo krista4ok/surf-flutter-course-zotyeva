@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SightListScreen(),
+      home: SightDetailsScreen(sight: mocks.first,),
     );
   }
 }
