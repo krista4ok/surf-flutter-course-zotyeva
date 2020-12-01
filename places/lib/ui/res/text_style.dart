@@ -8,6 +8,7 @@ TextStyle _text = TextStyle(
     textBold = _text.copyWith(fontWeight: FontWeight.w700),
     textBold32 = textBold.copyWith(fontSize: 32),
     textBold14 = textBold.copyWith(fontSize: 14),
+    textBold24 = textBold.copyWith(fontSize: 24),
 
     /// Medium.
     textMedium = _text.copyWith(fontWeight: FontWeight.w500),
