@@ -17,7 +17,7 @@ class SightDetailsScreen extends StatelessWidget {
       home: Scaffold(
         body: Column(
           children: [
-            ImageSight(),
+            ImageSight(sight: sight,),
             SightInfoWidget(sight),
             BuildARouteBtn(),
             DividerSightDetailsScreen(),
@@ -45,6 +45,9 @@ class SightDetailsScreen extends StatelessWidget {
 
 /// Виджет отображения фотографии интересмного места.
 class ImageSight extends StatelessWidget {
+  final Sight sight;
+
+  const ImageSight({this.sight});
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -52,7 +55,23 @@ class ImageSight extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 360,
-          color: Colors.deepPurpleAccent,
+          child: Image.network(
+            sight.url,
+            width: double.infinity,
+            fit: BoxFit.cover,
+            loadingBuilder: (BuildContext context, Widget child,
+                ImageChunkEvent loadingProgress) {
+              if (loadingProgress == null) return child;
+              return Center(
+                child: CircularProgressIndicator(
+                  value: loadingProgress.expectedTotalBytes != null
+                      ? loadingProgress.cumulativeBytesLoaded /
+                      loadingProgress.expectedTotalBytes
+                      : null,
+                ),
+              );
+            },
+          ),
         ),
         Positioned(
           top: 36,

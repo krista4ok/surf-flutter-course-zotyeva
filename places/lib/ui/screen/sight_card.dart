@@ -21,7 +21,7 @@ class SightCard extends StatelessWidget {
         aspectRatio: 3 / 2,
         child: Column(
           children: [
-            TopSightCard(),
+            TopSightCard(_sight),
             BottomSightCard(_sight),
           ],
         ),
@@ -31,20 +31,40 @@ class SightCard extends StatelessWidget {
 }
 
 class TopSightCard extends StatelessWidget {
+  final Sight _sight;
+
+  TopSightCard(this._sight);
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(16),
-            topRight: Radius.circular(16),
-          ),
-          color: Colors.deepPurpleAccent,
-        ),
         width: double.infinity,
         child: Stack(
           children: [
+            ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
+              ),
+              child: Image.network(
+                _sight.url,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                loadingBuilder: (BuildContext context, Widget child,
+                    ImageChunkEvent loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Center(
+                    child: CircularProgressIndicator(
+                      value: loadingProgress.expectedTotalBytes != null
+                          ? loadingProgress.cumulativeBytesLoaded /
+                              loadingProgress.expectedTotalBytes
+                          : null,
+                    ),
+                  );
+                },
+              ),
+            ),
             Positioned(
               right: 18,
               top: 19,
