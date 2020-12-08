@@ -17,7 +17,9 @@ class SightDetailsScreen extends StatelessWidget {
       home: Scaffold(
         body: Column(
           children: [
-            ImageSight(sight: sight,),
+            ImageSight(
+              sight: sight,
+            ),
             SightInfoWidget(sight),
             BuildARouteBtn(),
             DividerSightDetailsScreen(),
@@ -48,6 +50,7 @@ class ImageSight extends StatelessWidget {
   final Sight sight;
 
   const ImageSight({this.sight});
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -59,14 +62,17 @@ class ImageSight extends StatelessWidget {
             sight.url,
             width: double.infinity,
             fit: BoxFit.cover,
-            loadingBuilder: (BuildContext context, Widget child,
-                ImageChunkEvent loadingProgress) {
+            loadingBuilder: (
+              BuildContext context,
+              Widget child,
+              ImageChunkEvent loadingProgress,
+            ) {
               if (loadingProgress == null) return child;
               return Center(
                 child: CircularProgressIndicator(
                   value: loadingProgress.expectedTotalBytes != null
                       ? loadingProgress.cumulativeBytesLoaded /
-                      loadingProgress.expectedTotalBytes
+                          loadingProgress.expectedTotalBytes
                       : null,
                 ),
               );
@@ -91,7 +97,7 @@ class BackBtn extends StatelessWidget {
       child: Icon(
         Icons.arrow_back_ios_outlined,
         size: 10,
-        color: backBtnColor,
+        color: mainColor,
       ),
       height: 32,
       width: 32,

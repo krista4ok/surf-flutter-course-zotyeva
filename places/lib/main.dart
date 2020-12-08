@@ -3,6 +3,7 @@ import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_details.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/screen/sight_screen.dart';
+import 'package:places/ui/screen/visiting_screen.dart';
 
 void main() {
   runApp(App());
@@ -15,7 +16,10 @@ class App extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SightDetailsScreen(sight: mocks.first,),
+      home: VisitingScreen(
+        listSightWantToVisit: mocksSightWantToVisit,
+        listVisitedSight: mocksVisitedSight,
+      ),
     );
   }
 }

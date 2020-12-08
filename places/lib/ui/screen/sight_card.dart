@@ -51,8 +51,11 @@ class TopSightCard extends StatelessWidget {
                 _sight.url,
                 width: double.infinity,
                 fit: BoxFit.cover,
-                loadingBuilder: (BuildContext context, Widget child,
-                    ImageChunkEvent loadingProgress) {
+                loadingBuilder: (
+                  BuildContext context,
+                  Widget child,
+                  ImageChunkEvent loadingProgress,
+                ) {
                   if (loadingProgress == null) return child;
                   return Center(
                     child: CircularProgressIndicator(

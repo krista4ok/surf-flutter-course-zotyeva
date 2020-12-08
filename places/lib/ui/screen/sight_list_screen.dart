@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/ui/common/default_bottom_navigation_bar.dart';
 import 'package:places/ui/res/colors.dart';
 import 'package:places/ui/res/string.dart';
 import 'package:places/ui/res/text_style.dart';
@@ -21,6 +22,7 @@ class SightListScreen extends StatelessWidget {
           child: AppBarSightListScreen(),
         ),
         body: BodySightListScreen(),
+        bottomNavigationBar: DefaultBottomNavigationBar(),
       ),
     );
   }
