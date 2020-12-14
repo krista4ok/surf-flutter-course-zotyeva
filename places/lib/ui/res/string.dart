@@ -1,9 +1,15 @@
-const String
-    interesting = 'Интересные',
+const String interesting = 'Интересные',
     places = ' места',
     listInterestingPlaces = 'Список \nинтересных мест',
     category = 'Категория',
     aroundTheClock = 'круглосуточно',
     buildARoute = 'построить маршрут',
     schedule = 'Запланировать',
-    toFavorites = 'В Избранное';
+    favorite = 'Избранное',
+    toFavorites = 'В Избранное',
+    wantToVisit = 'Хочу посетить',
+    visited = 'Посетил',
+    markSight = 'Отмечайте понравившиеся \nместа и они появятся здесь.',
+    completeRoute = 'Завершите маршрут, \nчтобы место попало сюда.',
+    empty = 'Пусто';
+

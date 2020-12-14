@@ -5,4 +5,4 @@ const Color secondaryColor = Color(0xFF3B3E5B),
     secondary2Color = Color(0xFF7C7E92),
     backgroundColor = Color(0xFFF5F5F5),
     btnColor = Color(0xFF4CAF50),
-    backBtnColor = Color(0xFF252849);
+    mainColor = Color(0xFF252849);

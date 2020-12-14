@@ -13,6 +13,7 @@ TextStyle _text = TextStyle(
     /// Medium.
     textMedium = _text.copyWith(fontWeight: FontWeight.w500),
     textMedium16 = textMedium.copyWith(fontSize: 16),
+    textMedium18 = textMedium.copyWith(fontSize: 18),
 
     /// Regular.
     textRegular = _text.copyWith(fontWeight: FontWeight.w400),
